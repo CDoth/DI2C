@@ -1,0 +1,14 @@
+#!/bin/bash
+
+g++ -c \
+/media/root/emmclinux/DothPlace/DothProject/DI2C/DI2C.cpp \
+-lwiringPi -lpthread \
+-std=c++11 
+
+ar rvs DI2CStatic.a \
+DI2C.o 
+
+cp DI2CStatic.a /media/root/emmclinux/DothPlace/DothProject/Linked/DI2CStatic.a
+
+rm DI2CStatic.a
+rm DI2C.o
